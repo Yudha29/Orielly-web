@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+
+.quick-sand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.orielly-bg-orange-700 {
+    background-color: #F18757
+}
+
+.orielly-text-orange-700 {
+    color: #F18757
+}
+
+.orielly-bg-orange-500 {
+    background-color: #FF9767
+}
+
+.orielly-text-orange-500 {
+    color: #FF9767
+}
+
+body {
+    @apply h-full text-gray-800 open-sans bg-gray-100;
+}
+
+@tailwind components;
+@tailwind utilities;
