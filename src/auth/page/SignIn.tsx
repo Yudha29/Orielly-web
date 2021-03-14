@@ -36,7 +36,7 @@ class SignIn extends React.Component<any, any> {
                         O'rielly
                     </p>
                     <div className="flex">
-                        <div className="w-5/12 p-8 rounded-l-md">
+                        <div className="w-5/12 p-8 rounded-l-sm">
                             <div className="text-right mb-8">
                                 <Link
                                     to="/"
@@ -79,7 +79,7 @@ class SignIn extends React.Component<any, any> {
                                         <div className="w-6/12">
                                             <Button
                                                 type="submit"
-                                                className="orielly-bg-primary text-white rounded-full"
+                                                className="orielly-bg-primary text-white rounded-md"
                                             >
                                                 Sign in
                                             </Button>
@@ -96,7 +96,7 @@ class SignIn extends React.Component<any, any> {
                                 </Form>
                             </Formik>
                         </div>
-                        <div className="w-7/12 overflow-hidden rounded-r-md relative">
+                        <div className="w-7/12 overflow-hidden rounded-r-sm relative">
                             <div
                                 className="absolute top-0 right-0 left-0 bottom-0 w-full"
                                 style={{

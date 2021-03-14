@@ -35,7 +35,7 @@ class SignUp extends React.Component<any, any> {
                         O'rielly
                     </p>
                     <div className="flex">
-                        <div className="w-5/12 p-8 rounded-l-md my-4">
+                        <div className="w-5/12 p-8 rounded-l-sm my-4">
                             <div className="mb-8">
                                 <h1 className="quick-sand text-gray-700 text-3xl font-bold mb-3">Sign Up</h1>
                                 <p className="text-gray-500 text-sm">
@@ -73,14 +73,14 @@ class SignUp extends React.Component<any, any> {
                                     </div>
                                     <Button
                                         type="submit"
-                                        className="orielly-bg-primary text-white rounded-full"
+                                        className="orielly-bg-primary text-white rounded-md"
                                     >
                                         Sign up
                                     </Button>
                                 </Form>
                             </Formik>
                         </div>
-                        <div className="w-7/12 overflow-hidden rounded-r-md relative">
+                        <div className="w-7/12 overflow-hidden rounded-r-sm relative">
                             <div
                                 className="absolute top-0 right-0 left-0 bottom-0 w-full"
                                 style={{

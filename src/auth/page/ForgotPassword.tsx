@@ -44,7 +44,7 @@ class ForgotPassword extends React.Component<any, any> {
                             <div className="mt-4">
                                 <Button
                                     type="submit"
-                                    className="orielly-bg-primary text-white rounded-full"
+                                    className="orielly-bg-primary text-white rounded-md"
                                 >
                                     Get verification code
                                 </Button>
