@@ -1,14 +1,16 @@
 import React from "react";
 import InputProps from "./InputProps";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faExclamationCircle} from "@fortawesome/free-solid-svg-icons";
 
 const Input: React.FC<InputProps> = props => {
     return (
         <>
-            <label className="block text-gray-500 font-bold text-xs mb-1.5">
+            <label className={`${props.error ? 'text-red-500' : 'text-gray-500'} block font-bold text-xs mb-1.5`}>
                 {props.label}
             </label>
             <input
-                className="rounded-md focus:border focus:border-gray-400 focus:outline-none text-sm placeholder-gray-400 text-gray-700 border border-gray-300 py-2.5 px-2 w-full"
+                className={`${props.error ? 'border-red-500' : 'border-gray-300'} rounded-md focus:border focus:outline-none text-sm placeholder-gray-400 text-gray-700 border py-2.5 px-2 w-full`}
                 onChange={props.onChange}
                 value={props.value}
                 placeholder={props.placeholder}
@@ -16,11 +18,16 @@ const Input: React.FC<InputProps> = props => {
                 name={props.name}
             />
             <span
-                className="block mt-0.5 text-xs text-right font-semibold text-red-400"
+                className="block mt-0.5 text-xs text-right text-red-500"
                 style={{
                     visibility: props.error ? 'visible' : 'hidden'
                 }}
             >
+                <FontAwesomeIcon
+                    className="text-red-500 mr-1"
+                    icon={faExclamationCircle}
+                    size="sm"
+                />
                 {!props.error ? 'e' : props.error}
             </span>
         </>
