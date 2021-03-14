@@ -17,7 +17,7 @@ class ForgotPassword extends React.Component<any, any> {
                 </Helmet>
                 <div className="shadow-md w-96 rounded-md mx-auto mt-36 bg-white p-8 relative">
                     <p
-                        className="absolute quick-sand text-4xl orielly-text-orange-700 font-bold"
+                        className="absolute quick-sand text-4xl orielly-text-primary font-bold"
                         style={{
                             top: -70,
                             left: '50%',
@@ -44,7 +44,7 @@ class ForgotPassword extends React.Component<any, any> {
                             <div className="mt-4">
                                 <Button
                                     type="submit"
-                                    className="orielly-bg-orange-700 text-white rounded-full"
+                                    className="orielly-bg-primary text-white rounded-full"
                                 >
                                     Get verification code
                                 </Button>

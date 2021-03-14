@@ -26,7 +26,7 @@ class SignUp extends React.Component<any, any> {
                     style={{width: 950}}
                 >
                     <p
-                        className="absolute quick-sand text-4xl orielly-text-orange-700 font-bold"
+                        className="absolute quick-sand text-4xl orielly-text-primary font-bold"
                         style={{
                             top: -70,
                             left: '2rem'
@@ -73,7 +73,7 @@ class SignUp extends React.Component<any, any> {
                                     </div>
                                     <Button
                                         type="submit"
-                                        className="orielly-bg-orange-700 text-white rounded-full"
+                                        className="orielly-bg-primary text-white rounded-full"
                                     >
                                         Sign up
                                     </Button>

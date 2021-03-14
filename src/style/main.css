@@ -10,24 +10,24 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.orielly-bg-orange-700 {
-    background-color: #F18757
+.orielly-bg-primary {
+    background-color: #DB2777;
 }
 
-.orielly-text-orange-700 {
-    color: #F18757
+.orielly-text-primary {
+    color: #DB2777;
 }
 
-.orielly-bg-orange-500 {
-    background-color: #FF9767
+.orielly-bg-secondary {
+    background-color: #EC4899;
 }
 
-.orielly-text-orange-500 {
-    color: #FF9767
+.orielly-text-secondary {
+    color: #EC4899;
 }
 
 body {
-    @apply h-full text-gray-800 open-sans bg-gray-100;
+    @apply h-full text-gray-800 open-sans bg-gray-50;
 }
 
 @tailwind components;
