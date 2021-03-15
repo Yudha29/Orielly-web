@@ -5,10 +5,11 @@ import Container from "../../component/layout/Container";
 import {RootState} from "../../../redux/contract/RootState";
 import HomeProps from "./HomeProps";
 import CategoryCard from "../../../category/component/CategoryCard";
+import ProductCard from "../../../product/component/ProductCard";
 
 class Home extends React.Component<HomeProps> {
     render() {
-        const {category} = this.props;
+        const {category, product} = this.props;
         return (
             <>
                 <Navbar />
@@ -23,7 +24,49 @@ class Home extends React.Component<HomeProps> {
                             Cari kategori apa?
                         </p>
                         <div className="flex flex-wrap">
-                            {category.all.map(c => <CategoryCard data={c} />)}
+                            {category.all.map(c => <CategoryCard
+                                key={c.id}
+                                data={c}
+                            />)}
+                        </div>
+                    </Container>
+                </section>
+                <section className="mt-8 mb-12">
+                    <Container>
+                        <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+                            Diskon nih
+                        </p>
+                        <div className="flex">
+                            <div className="bg-gray-400 md:w-6/12 m-1 rounded-md" />
+                            <div className="flex flex-wrap w-6/12">
+                                {product.all.filter(p => p.discount && p.discount > 0).map(p => (
+                                    <div
+                                        key={p.id}
+                                        className="md:w-2/6 p-1"
+                                    >
+                                        <ProductCard data={p}/>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </Container>
+                </section>
+                <section className="mt-8 mb-12">
+                    <Container>
+                        <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+                            Rekomendasi
+                        </p>
+                        <div className="flex">
+                            <div className="flex flex-wrap">
+                                {product.all.map(p => (
+                                    <div
+                                        key={p.id}
+                                        className="md:w-2/12 p-1"
+                                    >
+                                        <ProductCard data={p}/>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </Container>
                 </section>
@@ -32,6 +75,6 @@ class Home extends React.Component<HomeProps> {
     }
 }
 
-const mapStateToProps = ({category}: RootState) => ({category});
+const mapStateToProps = ({category, product}: RootState) => ({category, product});
 
 export default connect(mapStateToProps, {})(Home);
