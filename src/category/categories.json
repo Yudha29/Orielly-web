@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Ransel",
+    "picture": "backpack.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Tas Wanita",
+    "picture": "women-bag.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Gelang Tangan",
+    "picture": "bracelet.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Jam Tangan",
+    "picture": "watch.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Kacamata",
+    "picture": "eyeglasses.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Sepatu Wanita",
+    "picture": "high-heels.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Jaket Hoddie",
+    "picture": "hoddie.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Jeans",
+    "picture": "jeans.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Sneakers",
+    "picture": "sneaker.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Jas",
+    "picture": "suit.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Kemeja",
+    "picture": "shirt.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Kaos",
+    "picture": "sweetshirt.jpg"
+  }
+]
