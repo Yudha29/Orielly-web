@@ -1,1 +1,152 @@
-[]
+[
+  {
+    "id": "DW_ELAN_UNITY_BRACELET",
+    "name": "ELAN UNITY BRACELET",
+    "description": "The Elan Unity Bracelet symbolizes a singular link between two. A timeless reminder that rests on your wrist, a testimony to those who become one. Pair with the Elan Unity necklace for a perfect match. Designed to be worn as an everyday piece that makes a delicate statement.",
+    "merk": "Danniel Wellington",
+    "discount": 0.1,
+    "photos": [
+      "dw00400168_elan_unity_bracelet_155mm_rg.jpeg",
+      "dw00400168_elan_unity_bracelet_detail1_rg_shadow_1_1.jpeg",
+      "elan_unity_box_bracelet_rg.jpeg"
+    ],
+    "categories": ["Jam Tangan"],
+    "price": 1050000,
+    "numOfSold": 1076
+  },
+  {
+    "id": "CK_Asymmetric_Wedge_Sandals",
+    "name": "Asymmetric Wedge Sandals",
+    "description": "Simpel namun bergaya, sandal wedge asimetris ini dibuat untuk menjadi sepatu andalan Anda di hari kerja hingga akhir pekan. Menampilkan tumit kokoh yang rendah, sepatu hitam ini pasti akan membawa pakaian Anda ke ketinggian baru dalam sekejap mata. Berjalan satu mil dan lebih banyak lagi di permata nyaman yang tetap terpasang dengan aman dengan tali pergelangan kaki yang nyaman. Padukan dengan kemeja bergambar dan rok kulit untuk tampilan yang edgy dan seksi.",
+    "merk": "Charless and Keith",
+    "discount": 0.025,
+    "photos": [
+      "2021-L2-CK1-80030359-01-1.jpg",
+      "2021-L2-CK1-80030359-01-3.jpg",
+      "2021-L2-CK1-80030359-01-5.jpg",
+      "2021-L2-CK1-80030359-01-7.jpg"
+    ],
+    "categories": ["Sepatu Wanita"],
+    "price": 749000,
+    "numOfSold": 1076
+  },
+  {
+    "id": "DW_ICONIC_LINK_CERAMIC",
+    "name": "ICONIC LINK CERAMIC",
+    "description": "The Iconic Link Ceramic adalah jam tangan pertama kami yang seluruhnya terbuat dari keramik. Menampilkan aksen perak di tangan dan penanda pelat jam agar serasi dengan permukaan mengkilap dari sambungan keramik. Tambahan unik pada koleksi Iconic Link ini menonjol sebagai pernyataan baru. Jam tangan hitam kecil yang dibutuhkan semua orang dalam koleksi mereka. Harap diperhatikan bahwa benturan keras dapat menyebabkan keramik pecah atau retak, meskipun hal ini jarang terjadi.",
+    "merk": "Danniel Wellington",
+    "discount": 0.050,
+    "photos": [
+      "dw00100415_iconic_link_ceramic_28_black_2.jpeg",
+      "dw00100415_iconic_link_ceramic_28_black_closeup1.jpeg",
+      "dw00100415_iconic_link_ceramic_28_black_closeup2.jpeg",
+      "dw00100415_iconic_link_ceramic_28_black_closeup3.jpeg",
+      "dw00100415_iconic_link_ceramic_28_black_box.jpeg"
+    ],
+    "categories": ["Jam Tangan"],
+    "price": 4250000,
+    "numOfSold": 12076
+  },
+  {
+    "id": "CK_Chain_Detail_Trapeze_Bag",
+    "name": "Chain Detail Trapeze Bag",
+    "description": "Tas dengan pegangan atas sangat populer di musim ini - sekarang saatnya memperkenalkan satu tas ke koleksi Anda dalam bentuk keindahan gading dan cognac dua warna ini. Dibuat dengan bentuk trapeze menonjol yang menarik perhatian, tas ini menawarkan banyak ruang penyimpanan untuk menyimpan barang-barang Anda sehari-hari. Dengan tali yang dapat dilepas yang memungkinkan Anda melakukan hands-free dengan membawanya seperti crossbody, padukan dengan pakaian bermain linen dan bagal bertekstur untuk tampilan yang siap musim semi.",
+    "merk": "Charless and Keith",
+    "discount": 0.1,
+    "photos": [
+      "2021-L2-CK2-50671255-28-1.jpg",
+      "2021-L2-CK2-50671255-28-3.jpg",
+      "2021-L2-CK2-50671255-28-5.jpg",
+      "2021-L2-CK2-50671255-28-7.jpg",
+      "2021-L2-CK2-50671255-28-8.jpg"
+    ],
+    "categories": ["Tas Wanita"],
+    "price": 1299000,
+    "numOfSold": 6026
+  },
+  {
+    "id": "CK_Metallic_Buckle_Shoulder_Bag",
+    "name": "Metallic Buckle Shoulder Bag",
+    "description": "Bawalah pegas saat Anda melangkah keluar rumah dengan tas bahu kuning tersampir di lengan Anda. Dihiasi dengan gesper metalik untuk tampilan yang edgy namun chic, permata ini hadir dengan tali yang dapat disesuaikan sehingga Anda dapat memakainya sesuai panjang yang Anda inginkan. Penutup magnet dapat membuka dan menutup dengan mudah, sehingga Anda dapat mengakses barang Anda tanpa repot. Kami rasa akan terlihat bagus jika dipasangkan dengan blus oversized yang dimasukkan ke dalam rok A-line.",
+    "merk": "Charless and Keith",
+    "discount": 0,
+    "photos": [
+      "2021-L2-CK2-20781411-23-1.jpg",
+      "2021-L2-CK2-20781411-23-3.jpg",
+      "2021-L2-CK2-20781411-23-5.jpg",
+      "2021-L2-CK2-20781411-23-7.jpg",
+      "2021-L2-CK2-20781411-23-8.jpg"
+    ],
+    "categories": ["Tas Wanita"],
+    "price": 849000,
+    "numOfSold": 24026
+  },
+  {
+    "id": "CK_Nylon_Panelled_Tote_Bag",
+    "name": "Nylon Panelled Tote Bag",
+    "description": "Revitalisasi lemari pakaian kerja Anda dengan menambahkan tote bag yang elegan ini ke dalam koleksi Anda. Menawarkan banyak ruang bagi Anda untuk menyimpan barang-barang yang harus Anda miliki di bagian dalamnya, kecantikan nilon ini hadir dalam lapisan berpanel abu-abu yang memberi dimensi pada penampilan Anda. Bawalah sendiri atau dengan tali pengikat yang memungkinkan Anda memakainya sesuai panjang yang Anda inginkan. Cocokkan dengan gaun flowy dan pasangan yang disesuaikan untuk tampilan chic perusahaan yang dipoles.",
+    "merk": "Charless and Keith",
+    "discount": 0,
+    "photos": [
+      "2021-L2-CK2-30151002-04-1.jpg",
+      "2021-L2-CK2-30151002-04-2.jpg",
+      "2021-L2-CK2-30151002-04-3.jpg",
+      "2021-L2-CK2-30151002-04-5.jpg",
+      "2021-L2-CK2-30151002-04-8.jpg"
+    ],
+    "categories": ["Tas Wanita"],
+    "price": 1049000,
+    "numOfSold": 8156
+  },
+  {
+    "id": "CK_Organic_Cotton_Platform_Sneakers",
+    "name": "Organic Cotton Platform Sneakers",
+    "description": "Didesain dengan warna hijau mint untuk memberikan penampilan Anda semburat warna cerah, sepatu kets ini menampilkan tumit platform yang tebal namun nyaman yang akan memberi Anda tambahan tinggi. Terbuat dari katun organik, TPR daur ulang, dan TPR konvensional, sepatu kets ini adalah bukti bahwa tampil menarik tidak harus mengorbankan lingkungan. Padukan dengan jeans berkaki lebar dan tank top untuk kesan kasual dan santai.",
+    "merk": "Charless and Keith",
+    "discount": 0,
+    "photos": [
+      "2021-L2-CK1-70900235-B3-1.jpg",
+      "2021-L2-CK1-70900235-B3-2.jpg",
+      "2021-L2-CK1-70900235-B3-3.jpg",
+      "2021-L2-CK1-70900235-B3-5.jpg",
+      "2021-L2-CK1-70900235-B3-8.jpg"
+    ],
+    "categories": ["Sepatu Wanita"],
+    "price": 799000,
+    "numOfSold": 17910
+  },
+  {
+    "id": "CK_Patent_Square_Handle_Tote_Bag",
+    "name": "Patent Square Handle Tote Bag",
+    "description": "Dibuat untuk para pakar gaya edgy, tote bag ini menawarkan kemewahan yang tiada habisnya baik siang maupun malam. Lengkap dengan sentuhan akhir hitam paten yang menambah kilau pada penampilan biasa Anda, juga dilengkapi dengan pegangan persegi untuk sedikit modernitas. Dengan kompartemen dalam berukuran sedang yang menampung semua barang yang harus Anda miliki, barang-barang Anda tetap aman namun mudah dijangkau dengan penutup magnet yang menyertai. Dandani dengan jumpsuit berikat dan ankle boots untuk hasil akhir yang berani.",
+    "merk": "Charless and Keith",
+    "discount": 0.4,
+    "photos": [
+      "2021-L2-CK2-30270664-01-1.jpg",
+      "2021-L2-CK2-30270664-01-3.jpg",
+      "2021-L2-CK2-30270664-01-5.jpg",
+      "2021-L2-CK2-30270664-01-7.jpg",
+      "2021-L2-CK2-30270664-01-8.jpg"
+    ],
+    "categories": ["Tas Wanita"],
+    "price": 599000,
+    "numOfSold": 302228
+  },
+  {
+    "id": "DW_PETITE_MELROSE",
+    "name": "PETITE MELROSE",
+    "description": "Petite Melrose mengunggulkan arloji putih telur dan strap mesh rose gold yang tak tertandingi keanggunannya. Jam ini memperindah busana harian, suasana hati, dan semangat Anda.",
+    "merk": "Danniel Wellington",
+    "discount": 0.5,
+    "photos": [
+      "dw-petite-28-melrose-white-cat_14.jpeg",
+      "dw_classic_petite-28rg_closeup_front_2_15.jpeg",
+      "petite-28-melrose_5.jpeg",
+      "dw_classic_petite_28rg_closeup_back_1_7.jpeg",
+      "dw00100219_petite_melrose_w28rg_box_2.jpeg"
+    ],
+    "categories": ["Jam Tangan"],
+    "price": 2450000,
+    "numOfSold": 128076
+  }
+]
