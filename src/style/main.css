@@ -18,12 +18,20 @@
     color: #DB2777;
 }
 
+.orielly-border-primary {
+    border-color: #DB2777;
+}
+
 .orielly-bg-secondary {
     background-color: #EC4899;
 }
 
 .orielly-text-secondary {
     color: #EC4899;
+}
+
+.orielly-border-secondary {
+    border-color: #EC4899;
 }
 
 body {
