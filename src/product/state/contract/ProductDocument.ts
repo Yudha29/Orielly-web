@@ -5,7 +5,7 @@ export default interface ProductDocument {
     photos: string[];
     merk: string;
     discount: number;
-    categories: [];
+    categories: string[];
     price: number;
     numOfSold: number;
 }
