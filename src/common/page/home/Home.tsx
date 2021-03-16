@@ -6,6 +6,8 @@ import {RootState} from "../../../redux/contract/RootState";
 import HomeProps from "./HomeProps";
 import CategoryCard from "../../../category/component/CategoryCard";
 import ProductCard from "../../../product/component/ProductCard";
+import Footer from "../../component/navigation/footer/Footer";
+import {shuffle} from "../../util/collection";
 
 class Home extends React.Component<HomeProps> {
     render() {
@@ -39,7 +41,7 @@ class Home extends React.Component<HomeProps> {
                         <div className="flex">
                             <div className="bg-gray-400 md:w-6/12 m-1 rounded-md" />
                             <div className="flex flex-wrap w-6/12">
-                                {product.all.filter(p => p.discount && p.discount > 0).map(p => (
+                                {shuffle([...product.all]).filter(p => p.discount && p.discount > 0).map(p => (
                                     <div
                                         key={p.id}
                                         className="md:w-2/6 p-1"
@@ -56,20 +58,19 @@ class Home extends React.Component<HomeProps> {
                         <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
                             Rekomendasi
                         </p>
-                        <div className="flex">
-                            <div className="flex flex-wrap">
-                                {product.all.map(p => (
-                                    <div
-                                        key={p.id}
-                                        className="md:w-2/12 p-1"
-                                    >
-                                        <ProductCard data={p}/>
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="flex flex-wrap">
+                            {shuffle([...product.all]).map(p => (
+                                <div
+                                    key={p.id}
+                                    className="md:w-2/12 p-1"
+                                >
+                                    <ProductCard data={p}/>
+                                </div>
+                            ))}
                         </div>
                     </Container>
                 </section>
+                <Footer />
             </>
         );
     }
