@@ -6,23 +6,28 @@ import {faShoppingBag, faUserCircle} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar: React.FC = () => {
     return (
-        <div className="orielly-bg-primary">
+        <div className="orielly-bg-primary sticky top-0">
             <Container>
                 <div className="flex">
-                    <div className="py-1 text-xs ml-auto text-white">
+                    <div className="py-1.5 text-xs ml-auto text-white">
                         <Link to="/about">
-                            <span className="mr-5 hover:underline">
+                            <span className="hover:underline">
                                 Tentang Kami
                             </span>
                         </Link>
                         <Link to="/help">
-                            <span className="hover:underline">
+                            <span className="ml-5 hover:underline">
                                 Bantuan
+                            </span>
+                        </Link>
+                        <Link to="/signin">
+                            <span className="ml-5 hover:underline">
+                                Masuk
                             </span>
                         </Link>
                     </div>
                 </div>
-                <div className="flex pb-4 pt-2 items-center">
+                <div className="flex pt-4 pb-3 items-center">
                     <p
                         className="quick-sand text-4xl text-white font-bold"
                         style={{
@@ -35,7 +40,7 @@ const Navbar: React.FC = () => {
                     <div className="mx-auto text-sm flex-1 text-center">
                         <input
                             type="text"
-                            className="w-9/12 py-2.5 focus:outline-none px-4 bg-gray-50 rounded-md"
+                            className="w-8/12 py-2.5 focus:outline-none px-4 bg-gray-50 rounded-sm"
                             placeholder="Sneakers"
                         />
                     </div>
