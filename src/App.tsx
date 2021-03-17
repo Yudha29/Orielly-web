@@ -12,6 +12,7 @@ import Home from "./common/page/home/Home";
 import {store} from "./redux/store";
 import Search from "./common/page/search/Search";
 import Bag from "./bag/page/Bag";
+import ProductDetail from "./product/page/productDetail/ProductDetail";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/signup" component={SignUp} />
                     <Route path="/forgot" component={ForgotPassword} />
                     <Route path="/reset" component={ResetPassword} />
+                    <Route path="/:id" component={ProductDetail} />
                 </Switch>
             </Router>
         </Provider>
