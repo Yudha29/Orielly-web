@@ -4,5 +4,5 @@ export default interface ButtonProps {
     type?: 'reset' | 'submit' | 'button';
     onClick?: (ev: React.MouseEvent) => {};
     className?: string;
-    children: string;
+    children: any;
 }
