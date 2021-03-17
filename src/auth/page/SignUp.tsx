@@ -73,7 +73,7 @@ class SignUp extends React.Component<any, any> {
                                     </div>
                                     <Button
                                         type="submit"
-                                        className="orielly-bg-primary text-white rounded-md"
+                                        className="orielly-bg-primary w-full text-white rounded-md"
                                     >
                                         Sign up
                                     </Button>

@@ -5,7 +5,7 @@ const Button: React.FC<ButtonProps> = props => {
         <button
             onClick={props.onClick}
             type={props.type}
-            className={`${props.className} focus:outline-none w-full py-2.5 px-4`}
+            className={`${props.className} focus:outline-none py-2.5 px-4`}
         >
             {props.children}
         </button>
