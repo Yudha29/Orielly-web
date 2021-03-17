@@ -1,27 +1,12 @@
 import _ from 'lodash';
 import React from "react";
 import ProductCardProps from "./ProductCardProps";
+import {getUnitLevel, getUnitName, numberWithCommas} from "../../common/util/numberUtil";
 
 const ProductCard: React.FC<ProductCardProps> = props => {
-    const getUnitLevel = (num: number) => {
-        const numStr = num.toString();
-        const digits = numStr.substr(1, numStr.length-1).length;
-        return Math.floor(digits/3);
-    }
-    const getUnitName = (num: number) => {
-        const unitLevel = getUnitLevel(num);
-        if (unitLevel === 1) return 'RB';
-        else if (unitLevel === 2) return 'Jt';
-        return '';
-    }
-
-    function numberWithCommas(x: number) {
-        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".");
-    }
-
     const {discount, price, numOfSold, photos} = props.data;
     const hasSpecialOffer = discount && discount > 0;
-    const afterDiscount = Math.round(price - price * (discount/100));
+    const afterDiscount = Math.round(price - price * discount);
     const unitLevel = getUnitLevel(numOfSold);
     const numOfSoldDigits = typeof numOfSold === 'number' ? String(Math.floor(numOfSold/Math.pow(1000, unitLevel))).length : 0;
     const hasValidDigits = numOfSoldDigits > 0;
