@@ -10,7 +10,7 @@ const rootState: RootState = {} as any;
 export const store = createStore(
     reducers,
     rootState,
-    composeWithDevTools(
-        applyMiddleware(thunk)
-    )
+    // composeWithDevTools(
+    //     applyMiddleware(thunk)
+    // )
 )
