@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from "react";
+import {Link} from 'react-router-dom';
 import ProductCardProps from "./ProductCardProps";
 import {getUnitLevel, getUnitName, numberWithCommas} from "../../common/util/numberUtil";
 
@@ -12,7 +13,10 @@ const ProductCard: React.FC<ProductCardProps> = props => {
     const hasValidDigits = numOfSoldDigits > 0;
     const numOfSoldStr = hasValidDigits ? String(numOfSold).substr(0, numOfSoldDigits) : String(numOfSold);
     return (
-
+        <Link to={`/${props.data.id}`} onClick={() => {
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }}>
             <div
                 className="bg-white rounded-md overflow-hidden shadow-md w-full hover:shadow-lg transition cursor-pointer"
                 style={{
@@ -43,6 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = props => {
                     </div>
                 </div>
             </div>
+        </Link>
     )
 }
 
