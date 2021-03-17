@@ -15,7 +15,7 @@ const BagItem: React.FC<BagItemProps> = props => {
     const afterDiscount = Math.round(productData.price - productData.price * productData.discount);
     return (
         <div className="my-2 border-t-2 py-4 border-gray-200">
-            <div className="flex">
+          G  <div className="flex">
                 <div className="flex mr-8 w-8/12">
                     <div
                         className="w-16 h-16 bg-gray-300 rounded-sm"

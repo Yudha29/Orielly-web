@@ -45,16 +45,20 @@ const Navbar: React.FC = () => {
                         />
                     </div>
                     <div className="flex ml-auto">
-                        <FontAwesomeIcon
-                            className="text-white mr-8"
-                            icon={faShoppingBag}
-                            size="lg"
-                        />
-                        <FontAwesomeIcon
-                            className="text-white"
-                            icon={faUserCircle}
-                            size="lg"
-                        />
+                        <Link to="/bag">
+                            <FontAwesomeIcon
+                                className="text-white mr-8"
+                                icon={faShoppingBag}
+                                size="lg"
+                            />
+                        </Link>
+                        <Link to="/#">
+                            <FontAwesomeIcon
+                                className="text-white"
+                                icon={faUserCircle}
+                                size="lg"
+                            />
+                        </Link>
                     </div>
                 </div>
             </Container>

@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
 import QuantityInputProps from "./QuantityInputProps";
 import {connect} from "react-redux";
-import {updateQuantity} from "../../state/cartAction";
+import {updateQuantity} from "../../state/bagAction";
 
 const QuantityInput: React.FC<QuantityInputProps> = props => {
     const {updateQuantity, quantity, productId} = props;

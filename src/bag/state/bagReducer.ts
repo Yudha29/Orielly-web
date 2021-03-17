@@ -1,11 +1,11 @@
-import CartState from "./contract/CartState";
-import cart from '../cart.json';
+import BagState from "./contract/BagState";
+import bag from '../bag.json';
 
-const initialState: CartState = {
-    items: cart,
+const initialState: BagState = {
+    items: bag,
 }
 
-const cartReducer = (state = initialState, action: any) => {
+const bagReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case 'QUANTITY_UPDATED': {
             if (action.payload.quantity === 0)
@@ -25,4 +25,4 @@ const cartReducer = (state = initialState, action: any) => {
     }
 }
 
-export default cartReducer;
+export default bagReducer;

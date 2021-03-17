@@ -1,7 +1,7 @@
-import CartState from "../../state/contract/CartState";
+import BagState from "../../state/contract/BagState";
 import ProductState from "../../../product/state/contract/ProductState";
 
 export default interface SummaryCardProps {
-    cart: CartState,
+    bag: BagState,
     product: ProductState
 }

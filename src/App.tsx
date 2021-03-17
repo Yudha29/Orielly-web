@@ -11,6 +11,7 @@ import ResetPassword from "./auth/page/ResetPassword";
 import Home from "./common/page/home/Home";
 import {store} from "./redux/store";
 import Search from "./common/page/search/Search";
+import Bag from "./bag/page/Bag";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <Switch>
                     <Route path="/" component={Home} exact />
                     <Route path="/search" component={Search} />
+                    <Route path="/bag" component={Bag} />
                     <Route path="/signin" component={SignIn} />
                     <Route path="/signup" component={SignUp} />
                     <Route path="/forgot" component={ForgotPassword} />

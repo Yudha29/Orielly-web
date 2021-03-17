@@ -7,8 +7,8 @@ import {connect} from "react-redux";
 import {numberWithCommas} from "../../../common/util/numberUtil";
 
 const SummaryCard: React.FC<SummaryCardProps> = props => {
-    const productIdsInBag = props.cart.items.map(e => e.productId);
-    const productQuantityMap = _.keyBy(props.cart.items, 'productId');
+    const productIdsInBag = props.bag.items.map(e => e.productId);
+    const productQuantityMap = _.keyBy(props.bag.items, 'productId');
     const productsInBag = props.product.all.filter(e => productIdsInBag.indexOf(e.id) > -1);
     const getTotalDiscount = () => productsInBag.reduce((acc, curr) => {
         return acc + (curr.price * productQuantityMap[curr.id].quantity) * curr.discount;
@@ -47,6 +47,6 @@ const SummaryCard: React.FC<SummaryCardProps> = props => {
     );
 }
 
-const mapStateToProps = ({product, cart}: RootState) => ({product, cart});
+const mapStateToProps = ({product, bag}: RootState) => ({product, bag});
 
 export default connect(mapStateToProps, {})(SummaryCard);
