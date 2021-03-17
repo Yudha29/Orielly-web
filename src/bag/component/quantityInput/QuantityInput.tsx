@@ -6,15 +6,13 @@ import {connect} from "react-redux";
 import {updateQuantity} from "../../state/bagAction";
 
 const QuantityInput: React.FC<QuantityInputProps> = props => {
-    const {updateQuantity, quantity, productId} = props;
-    const increment = () => updateQuantity(productId, quantity + 1);
-    const decrement = () => updateQuantity(productId, quantity - 1);
+    const {increment, quantity, decrement} = props;
     return (
-        <div className="ml-auto">
-            <div className="w-24 flex mx-auto items-center border text-gray-600 py-1 px-2 rounded-md border-gray-200">
+            <div className="w-24 flex items-center border text-gray-600 py-1 px-2 rounded-md border-gray-200">
                 <button
                     className="focus:outline-none mr-auto"
                     onClick={decrement}
+                    disabled={quantity === 0}
                 >
                     <FontAwesomeIcon
                         className="text-gray-400 mr-4"
@@ -22,7 +20,7 @@ const QuantityInput: React.FC<QuantityInputProps> = props => {
                         size="sm"
                     />
                 </button>
-                {props.quantity}
+                {quantity}
                 <button
                     className="focus:outline-none ml-auto"
                     onClick={increment}
@@ -34,7 +32,6 @@ const QuantityInput: React.FC<QuantityInputProps> = props => {
                     />
                 </button>
             </div>
-        </div>
     )
 }
 

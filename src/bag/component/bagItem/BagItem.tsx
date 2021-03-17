@@ -5,6 +5,7 @@ import BagItemProps from "./BagItemProps";
 import {numberWithCommas} from "../../../common/util/numberUtil";
 import QuantityInput from "../quantityInput/QuantityInput";
 import _ from "lodash";
+import {updateQuantity} from "../../state/bagAction";
 
 const BagItem: React.FC<BagItemProps> = props => {
     const {product, itemData} = props;
@@ -13,9 +14,10 @@ const BagItem: React.FC<BagItemProps> = props => {
         return null;
     const hasSpecialOffer = productData.discount && productData.discount > 0;
     const afterDiscount = Math.round(productData.price - productData.price * productData.discount);
+
     return (
         <div className="my-2 border-t-2 py-4 border-gray-200">
-          G  <div className="flex">
+            <div className="flex">
                 <div className="flex mr-8 w-8/12">
                     <div
                         className="w-16 h-16 bg-gray-300 rounded-sm"
@@ -43,10 +45,13 @@ const BagItem: React.FC<BagItemProps> = props => {
                     </div>
                 </div>
                 <div className="self-center w-2/12 flex">
-                    <QuantityInput
-                        productId={productData.id}
-                        quantity={itemData.quantity}
-                    />
+                    <div className="ml-auto">
+                        <QuantityInput
+                            increment={() => props.updateQuantity(productData.id, itemData.quantity + 1)}
+                            decrement={() => props.updateQuantity(productData.id, itemData.quantity - 1)}
+                            quantity={itemData.quantity}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,4 +59,4 @@ const BagItem: React.FC<BagItemProps> = props => {
 }
 
 const mapStateToProps = ({product}: RootState) => ({product})
-export default connect(mapStateToProps, {})(BagItem);
+export default connect(mapStateToProps, {updateQuantity})(BagItem);

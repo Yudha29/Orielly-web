@@ -1,5 +1,5 @@
 export default interface QuantityInputProps {
-    updateQuantity: (productId: string, quantity: number) => void;
+    increment: () => void;
+    decrement: () => void;
     quantity: number;
-    productId: string;
 }
