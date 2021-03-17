@@ -31,10 +31,23 @@ class Bag extends React.Component<BagProps> {
                                     minHeight: '32rem'
                                 }}
                             >
-                                <div className="py-2 text-gray-600 font-semibold">
-                                    Isi tas kamu
-                                </div>
-                                {bag.items.map(e => <BagItem itemData={e} />)}
+                                {bag.items.length > 0 ? (
+                                    <>
+                                        <div className="py-2 text-gray-600 font-semibold">
+                                            Isi tas kamu
+                                        </div>
+                                        {bag.items.map(e => <BagItem itemData={e} />)}
+                                    </>
+                                ): (
+                                    <div className="w-full my-20">
+                                        <img
+                                            className="w-72 mx-auto mb-8"
+                                            src="/assets/illustration/void.svg"
+                                            alt="empty-cart"
+                                        />
+                                        <p className="text-center text-md text-gray-400">Yah tas belanja kamu kosong</p>
+                                    </div>
+                                )}
                             </div>
                             <div className="w-4/12 px-8">
                                 <SummaryCard  />
