@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from "../common/component/navigation/navbar/Navbar";
-import Footer from "../common/component/navigation/footer/Footer";
-import Container from "../common/component/layout/Container";
+import Navbar from "../component/navigation/navbar/Navbar";
+import Footer from "../component/navigation/footer/Footer";
+import Container from "../component/layout/Container";
 
 const About: React.FC = () => {
   return (

@@ -14,10 +14,10 @@ import Search from "./common/page/search/Search";
 import Bag from "./bag/page/Bag";
 import ScrollToTop from "./common/util/ScrollToTop";
 import ProductDetail from "./product/page/productDetail/ProductDetail";
-import PrivacyPolicy from "./privacyPolicy/PrivacyPolicy";
-import About from "./about/About";
-import Contact from "./contact/Contact";
-import TermOfUse from "./termOfUse/TermOfUse";
+import PrivacyPolicy from "./common/page/PrivacyPolicy";
+import About from "./common/page/About";
+import Contact from "./common/page/Contact";
+import TermOfUse from "./common/page/TermOfUse";
 
 function App() {
   return (

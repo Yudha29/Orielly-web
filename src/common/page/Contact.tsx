@@ -1,14 +1,14 @@
 import React from 'react';
-import Footer from "../common/component/navigation/footer/Footer";
-import Navbar from "../common/component/navigation/navbar/Navbar";
+import Footer from "../component/navigation/footer/Footer";
+import Navbar from "../component/navigation/navbar/Navbar";
 import {Form, Formik} from "formik";
-import TextInput from "../common/component/form/formik/textInput/TextInput";
-import TextArea from "../common/component/form/formik/textArea/TextArea";
-import Button from "../common/component/button/Button";
+import TextInput from "../component/form/formik/textInput/TextInput";
+import TextArea from "../component/form/formik/textArea/TextArea";
+import Button from "../component/button/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faMapMarked, faPaperPlane, faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
 import * as Yup from "yup";
-import Container from "../common/component/layout/Container";
+import Container from "../component/layout/Container";
 
 const Contact: React.FC = () => {
   const initVal = {email: '', name: '', message: ''}
