@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                         <FooterListTitle>O'rielly</FooterListTitle>
                         <FooterList>
                             <FooterListItem>
-                                <FooterLink to="#">
+                                <FooterLink to="/about">
                                     Tentang O'rielly
                                 </FooterLink>
                             </FooterListItem>

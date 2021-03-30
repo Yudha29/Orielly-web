@@ -28,6 +28,7 @@ function App() {
                     <Route path="/forgot" component={ForgotPassword} />
                     <Route path="/reset" component={ResetPassword} />
                     <Route path="/policies" component={PrivacyPolicy} />
+                    <Route path="/about" component={About} />
                     <Route path="/:id" component={ProductDetail} />
                 </Switch>
             </Router>
