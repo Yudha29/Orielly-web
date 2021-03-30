@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = props => {
                 />
                 <div className="px-2 py-1">
                     <p className="text-gray-500 text-xs mb-0">{props.data.merk}</p>
-                    <p className="text-gray-700 font-semibold text-sm mb-2">{props.data.name}</p>
+                    <p className="text-gray-700 font-semibold text-sm mb-2 truncate-2-lines">{props.data.name}</p>
                     <div className="mb-2">
                         <p className="text-xs line-through orielly-text-primary font-semibold">
                             {hasSpecialOffer ? `RP ${numberWithCommas(props.data.price)}` : ''}
