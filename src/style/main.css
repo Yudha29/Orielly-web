@@ -11,15 +11,15 @@
 }
 
 .orielly-bg-primary {
-    background-color: #DB2777;
+    background-color: #ee7660;
 }
 
 .orielly-text-primary {
-    color: #DB2777;
+    color: #ee7660;
 }
 
 .orielly-border-primary {
-    border-color: #DB2777;
+    border-color: #ee7660;
 }
 
 .orielly-bg-secondary {
@@ -41,6 +41,12 @@
     text-overflow: ellipsis;
     word-wrap: break-word;
     overflow: hidden;
+}
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body {
