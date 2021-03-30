@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                                 </FooterLink>
                             </FooterListItem>
                             <FooterListItem>
-                                <FooterLink to="#">
+                                <FooterLink to="/policies">
                                     Kebijakan Privasi
                                 </FooterLink>
                             </FooterListItem>
