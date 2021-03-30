@@ -72,6 +72,26 @@ class Bag extends React.Component<BagProps> {
                         </div>
                     </Container>
                 </section>
+                <section className="mt-8 mb-12">
+                  <Container>
+                    <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+                      Diskon banyak loh
+                    </p>
+                    <div className="flex flex-wrap">
+                      {shuffle([...product.all])
+                        .filter(p => p.discount && p.discount > 0)
+                        .filter((_, i) => i < 6)
+                        .map(p => (
+                          <div
+                            key={p.id}
+                            className="md:w-2/12 p-1"
+                          >
+                            <ProductCard data={p}/>
+                          </div>
+                        ))}
+                    </div>
+                  </Container>
+                </section>
                 <Footer />
             </>
         );
