@@ -11,12 +11,16 @@ import {shuffle} from "../../common/util/collection";
 import ProductCard from "../../product/component/ProductCard";
 import BagItem from "../component/bagItem/BagItem";
 import SummaryCard from "../component/summaryCard/SummaryCard";
+import {Helmet} from "react-helmet";
 
 class Bag extends React.Component<BagProps> {
     render() {
         const {product, bag} = this.props;
         return (
             <>
+                <Helmet>
+                  <title>Tas anda</title>
+                </Helmet>
                 <Navbar />
                 <section className="my-8">
                     <Container>

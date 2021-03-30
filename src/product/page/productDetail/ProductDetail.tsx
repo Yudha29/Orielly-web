@@ -15,6 +15,7 @@ import QuantityInput from "../../../bag/component/quantityInput/QuantityInput";
 import _ from "lodash";
 import {shuffle} from "../../../common/util/collection";
 import ProductCard from "../../component/ProductCard";
+import {Helmet} from "react-helmet";
 
 const ProductDetail: React.FC<ProductDetailProps> = props => {
     const [quantity, setQuantity] = useState(0);
@@ -34,6 +35,9 @@ const ProductDetail: React.FC<ProductDetailProps> = props => {
     }
     return (
         <>
+            <Helmet>
+                <title>{productData?.name}</title>
+            </Helmet>
             <Navbar />
             <section className="my-8">
                 <Container>

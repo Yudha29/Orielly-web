@@ -2,10 +2,14 @@ import React from 'react';
 import Navbar from "../component/navigation/navbar/Navbar";
 import Footer from "../component/navigation/footer/Footer";
 import Container from "../component/layout/Container";
+import {Helmet} from "react-helmet";
 
 const About: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Tentang Orielly</title>
+      </Helmet>
       <Navbar />
       <section className="my-8">
         <Container>

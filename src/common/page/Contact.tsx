@@ -9,6 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faMapMarked, faPaperPlane, faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
 import * as Yup from "yup";
 import Container from "../component/layout/Container";
+import {Helmet} from "react-helmet";
 
 const Contact: React.FC = () => {
   const initVal = {email: '', name: '', message: ''}
@@ -19,6 +20,9 @@ const Contact: React.FC = () => {
   });
   return (
     <>
+      <Helmet>
+        <title>Kontak Kami</title>
+      </Helmet>
       <Navbar />
       <section id="contact" className="mb-32">
          <Container>
