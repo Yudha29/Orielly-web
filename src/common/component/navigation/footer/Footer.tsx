@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                         <FooterListTitle>Panduan</FooterListTitle>
                         <FooterList>
                             <FooterListItem>
-                                <FooterLink to="#">
+                                <FooterLink to="terms">
                                     Syarat dan Ketentuan
                                 </FooterLink>
                             </FooterListItem>

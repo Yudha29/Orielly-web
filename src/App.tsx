@@ -17,6 +17,7 @@ import ProductDetail from "./product/page/productDetail/ProductDetail";
 import PrivacyPolicy from "./privacyPolicy/PrivacyPolicy";
 import About from "./about/About";
 import Contact from "./contact/Contact";
+import TermOfUse from "./termOfUse/TermOfUse";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
                     <Route path="/reset" component={ResetPassword} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/policies" component={PrivacyPolicy} />
+                    <Route path="/terms" component={TermOfUse} />
                     <Route path="/about" component={About} />
                     <Route path="/:id" component={ProductDetail} />
                 </Switch>
