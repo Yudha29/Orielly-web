@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Switch, Route} from 'react-router-dom';
+import {Switch, Route, Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import './App.css';
 import './style/main.output.css';
@@ -14,6 +14,8 @@ import Search from "./common/page/search/Search";
 import Bag from "./bag/page/Bag";
 import ProductDetail from "./product/page/productDetail/ProductDetail";
 import PrivacyPolicy from "./privacyPolicy/PrivacyPolicy";
+import About from "./about/About";
+import Contact from "./contact/Contact";
 
 function App() {
   return (

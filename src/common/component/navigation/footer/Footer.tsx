@@ -21,8 +21,8 @@ const Footer: React.FC = () => {
                                 </FooterLink>
                             </FooterListItem>
                             <FooterListItem>
-                                <FooterLink to="#">
-                                    Kontak
+                                <FooterLink to="/contact">
+                                    Hubungi Kami
                                 </FooterLink>
                             </FooterListItem>
                         </FooterList>
