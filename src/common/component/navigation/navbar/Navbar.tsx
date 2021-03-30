@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
                         </Link>
                         <Link to="/help">
                             <span className="ml-5 hover:underline">
-                                Bantuan
+                                Hubungi Kami
                             </span>
                         </Link>
                         <Link to="/signin">
