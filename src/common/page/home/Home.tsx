@@ -17,7 +17,12 @@ class Home extends React.Component<HomeProps> {
                 <Navbar />
                 <section className="mt-8 mb-12">
                     <Container>
-                        <div className="h-72 bg-gray-400 rounded-md"/>
+                      <div
+                        className="h-96 bg-gray-400 rounded-md bg-img "
+                        style={{
+                          backgroundImage: 'url(assets/illustration/Banner.jpg)'
+                        }}
+                      />
                     </Container>
                 </section>
                 <section className="mt-8 mb-12">
