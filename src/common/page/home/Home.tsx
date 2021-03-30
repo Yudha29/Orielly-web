@@ -41,7 +41,7 @@ class Home extends React.Component<HomeProps> {
                         <div className="flex">
                             <div className="bg-gray-400 md:w-6/12 m-1 rounded-md" />
                             <div className="flex flex-wrap w-6/12">
-                                {shuffle([...product.all]).filter(p => p.discount && p.discount > 0).map(p => (
+                                {shuffle([...product.all]).filter(p => p.discount && p.discount > 0).filter((p, i) => i < 6).map(p => (
                                     <div
                                         key={p.id}
                                         className="md:w-2/6 p-1"
