@@ -30,14 +30,14 @@ class Bag extends React.Component<BagProps> {
                         </p>
                         <div className="flex mt-6">
                             <div
-                                className="w-8/12 py-4 px-8 border border-gray-100 shadow-md bg-white"
+                                className="w-9/12 mr-4 p-4 border border-gray-100 shadow-md bg-white"
                                 style={{
                                     minHeight: '32rem'
                                 }}
                             >
                                 {bag.items.length > 0 ? (
                                     <>
-                                        <div className="py-2 text-gray-600 font-semibold">
+                                        <div className="pb-2 text-gray-500 font-bold">
                                             Isi tas kamu
                                         </div>
                                         {bag.items.map(e => <BagItem itemData={e} />)}
@@ -53,7 +53,7 @@ class Bag extends React.Component<BagProps> {
                                     </div>
                                 )}
                             </div>
-                            <div className="w-4/12 px-8">
+                            <div className="w-3/12">
                                 <SummaryCard  />
                             </div>
                         </div>
