@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Container from "../../layout/Container";
 import {Link, RouteComponentProps, withRouter} from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSearch, faShoppingBag, faUserCircle} from "@fortawesome/free-solid-svg-icons";
+import {faSearch, faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar: React.FC<RouteComponentProps> = props => {
   const query = new URLSearchParams(props.location.search);
@@ -15,7 +15,7 @@ const Navbar: React.FC<RouteComponentProps> = props => {
   }
 
   return (
-    <div className="orielly-bg-primary sticky top-0">
+    <div className="orielly-bg-primary sticky top-0 z-50">
       <Container>
         <div className="flex">
           <div className="py-1.5 text-xs ml-auto text-white">
