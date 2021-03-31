@@ -24,7 +24,9 @@ const About: React.FC = () => {
               <p className="quick-sand text-xl orielly-text-primary font-bold my-4">
                 Tentang kami
               </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>
+                Orielly adalah E-Commerce yang menjual berbagai jenis busana seperti sepatu, kemeja, kacamata dan lainnya dari berbagai merk-merk dan dengan jaminan busana-busana yang kami jual 100% adalah original
+              </p>
             </div>
           </div>
           <div className="mb-32">
