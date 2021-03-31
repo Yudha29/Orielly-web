@@ -1,10 +1,13 @@
 import React, {useState} from "react";
+import {connect} from 'react-redux';
 import Container from "../../layout/Container";
-import {Link, RouteComponentProps, withRouter} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faShoppingBag} from "@fortawesome/free-solid-svg-icons";
+import {RootState} from "../../../../redux/contract/RootState";
+import NavbarProps from "./NavbarProps";
 
-const Navbar: React.FC<RouteComponentProps> = props => {
+const Navbar: React.FC<NavbarProps> = props => {
   const query = new URLSearchParams(props.location.search);
   const queryKeyword = query.get('q') || '';
   const [keyword, setKeyword] = useState(queryKeyword);
@@ -18,7 +21,7 @@ const Navbar: React.FC<RouteComponentProps> = props => {
     <div className="orielly-bg-primary sticky top-0 z-50">
       <Container>
         <div className="flex">
-          <div className="py-1.5 text-xs ml-auto text-white">
+          <div className="pt-1.5 pb-0 text-xs ml-auto text-white">
             <Link to="/about">
               <span className="hover:underline">
                 Tentang Kami
@@ -73,6 +76,17 @@ const Navbar: React.FC<RouteComponentProps> = props => {
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
               </div>
+              <div className="flex">
+                {props.category.all
+                  .filter((e, i) => i < 6)
+                  .map(e => (
+                    <div className="mt-1">
+                      <Link to={`/search?category=${e.name}`}>
+                        <span className="mr-4 text-xs text-gray-100 hover:underline">{e.name}</span>
+                      </Link>
+                    </div>
+                  ))}
+              </div>
             </form>
           </div>
           <div className="flex ml-auto">
@@ -80,7 +94,7 @@ const Navbar: React.FC<RouteComponentProps> = props => {
               <FontAwesomeIcon
                 className="text-white"
                 icon={faShoppingBag}
-                size="lg"
+                size="2x"
               />
             </Link>
           </div>
@@ -90,4 +104,7 @@ const Navbar: React.FC<RouteComponentProps> = props => {
   )
 }
 
-export default withRouter(Navbar);
+const mapStateToProps = ({category}: RootState) => ({category});
+const dispatchMap = {};
+
+export default connect(mapStateToProps, dispatchMap)(withRouter(Navbar));
