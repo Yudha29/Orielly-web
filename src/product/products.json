@@ -472,23 +472,6 @@
   },
   {
     "id":"NEW_BALANCE_FUELCELL_PROPEL_WOMEN_S_RUNNING_SHOES",
-    "discount":0.43,
-    "name":"New Balance Fuelcell Propel Women's Running Shoes",
-    "description":"Didesain untuk pelari baru dan berpengalaman, sepatu lari wanita FuelCell Propel v2 dibuat untuk menyempurnakan langkah alami Anda. Midsole FuelCell yang baru dan lebih baik menawarkan bantalan panjang penuh yang penuh energi, membantu memajukan Anda. Nikmati kesesuaian yang mulus dan suportif serta estetika yang sangat atletis.",
-    "photos":[
-      "1NB-utama.jpg",
-      "1NB.jpg"
-    ],
-    "price":1599000,
-    "merk":"New Balance",
-    "categories":[
-      "Sepatu",
-      "Sport"
-    ],
-    "numOfSold":0
-  },
-  {
-    "id":"NEW_BALANCE_FUELCELL_PROPEL_WOMEN_S_RUNNING_SHOES",
     "discount":0.32,
     "name":"New Balance Fuelcell Propel Women's Running Shoes",
     "description":"Logo NB bertumpuk di bagian dada menambah sentuhan gaya yang terinspirasi dari koleksi klasik, dan saku kanggurunya membantumu menyimpan benda penting tetap praktis.",
@@ -499,7 +482,6 @@
     "price":499000,
     "merk":"New Balance",
     "categories":[
-      "Hoodie",
       "Sport"
     ],
     "numOfSold":1400
