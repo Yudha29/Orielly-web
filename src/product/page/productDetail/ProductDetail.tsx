@@ -18,116 +18,122 @@ import ProductCard from "../../component/ProductCard";
 import {Helmet} from "react-helmet";
 
 const ProductDetail: React.FC<ProductDetailProps> = props => {
-    const [quantity, setQuantity] = useState(0);
-    const id = props.match.params.id;
-    const productData = props.product.all.find(e => e.id === id) || null;
-    const getPriceAfterDiscount = (productDocument: ProductDocument) => {
-        const {price, discount} = productDocument;
-        return Math.round(price - price * discount);
-    }
-    const getNumberOfSoldStr = (productDocument: ProductDocument) => {
-        const {numOfSold} = productDocument
-        const unitLevel = getUnitLevel(numOfSold);
-        const numOfSoldDigits = typeof numOfSold === 'number' ? String(Math.floor(numOfSold/Math.pow(1000, unitLevel))).length : 0;
-        const hasValidDigits = numOfSoldDigits > 0;
-        const numOfSoldStr = hasValidDigits ? String(numOfSold).substr(0, numOfSoldDigits) : String(numOfSold);
-        return `${numOfSoldStr}${getUnitName(numOfSold)}`
-    }
-    return (
-        <>
-            <Helmet>
-                <title>{productData?.name}</title>
-            </Helmet>
-            <Navbar />
-            <section className="my-8">
-                <Container>
+  const [quantity, setQuantity] = useState(1);
+  const id = props.match.params.id;
+  const productData = props.product.all.find(e => e.id === id) || null;
+  const getPriceAfterDiscount = (productDocument: ProductDocument) => {
+    const {price, discount} = productDocument;
+    return Math.round(price - price * discount);
+  }
+  const getNumberOfSoldStr = (productDocument: ProductDocument) => {
+    const {numOfSold} = productDocument
+    const unitLevel = getUnitLevel(numOfSold);
+    const numOfSoldDigits = typeof numOfSold === 'number' ? String(Math.floor(numOfSold/Math.pow(1000, unitLevel))).length : 0;
+    const hasValidDigits = numOfSoldDigits > 0;
+    const numOfSoldStr = hasValidDigits ? String(numOfSold).substr(0, numOfSoldDigits) : String(numOfSold);
+    return `${numOfSoldStr}${getUnitName(numOfSold)}`
+  }
+  return (
+    <>
+      <Helmet>
+        <title>{productData?.name}</title>
+      </Helmet>
+      <Navbar />
+      <section className="my-8">
+        <Container>
+          <div>
+            {productData ? (
+              <div className="flex items-start">
+                <div className="flex w-9/12 p-4 border-gray-100 shadow-md rounded-md bg-white mr-4">
+                  <div className="w-5/12">
                     <div
-                        className="py-4 px-8 border border-gray-100 shadow-md rounded-md bg-white"
-                        style={{
-                            minHeight: '32rem'
-                        }}
-                    >
-                        {productData ? (
-                            <div className="flex p-2">
-                                <div className="md:w-5/12">
-                                    <div
-                                        className="w-96 h-96 bg-gray-300 rounded-sm"
-                                        style={{
-                                            backgroundPosition: 'center',
-                                            backgroundSize: 'cover',
-                                            backgroundRepeat: 'no-repeat',
-                                            backgroundImage: `url(assets/products/${_.get(productData.photos, '[0]')})`
-                                        }}
-                                    />
-                                </div>
-                                <div>
-                                    <div>
-                                        <p className="text-gray-500 text-sm quick-sand mb-0">{productData.merk}</p>
-                                        <p className="text-gray-700 font-semibold text-2xl mb-2 quick-sand">{productData.name}</p>
-                                        <p className="text-gray-400 text-sm">{getNumberOfSoldStr(productData)} Terjual</p>
-                                    </div>
-                                    <div className="mt-4 mb-8 flex items-center">
-                                        <p className="text-xl line-through text-gray-500 font-light mr-6">
-                                            {productData.discount > 0 ? `RP ${numberWithCommas(productData.price)}` : ''}
-                                        </p>
-                                        <p className="text-2xl orielly-text-primary font-bold">
-                                            <span>Rp{numberWithCommas(productData.discount > 0  ? getPriceAfterDiscount(productData) : productData.price)}</span>
-                                        </p>
-                                    </div>
-                                    <div className="border-t border-gray-300 py-8">
-                                        <div className="mb-4 flex items-center">
-                                            <span className="mr-6 text-sm text-gray-500 font-semibold">
-                                                Jumlah
-                                            </span>
-                                                <QuantityInput
-                                                    decrement={() => setQuantity(quantity - 1)}
-                                                    increment={() => setQuantity(quantity + 1)}
-                                                    quantity={quantity}
-                                                />
-                                        </div>
-                                        <Button className="rounded-md orielly-bg-primary text-white">
-                                            <FontAwesomeIcon
-                                                className="mr-2"
-                                                icon={faShoppingBag}
-                                            />
-                                            Masukan Tas
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        ): (
-                            <div className="w-full my-20">
-                                <img
-                                    className="w-72 mx-auto mb-8"
-                                    src="/assets/illustration/ProductNotFound.svg"
-                                    alt="empty-cart"
-                                />
-                                <p className="text-center text-md text-gray-400">Yah tas belanja kamu kosong</p>
-                            </div>
-                        )}
+                      className="h-72 rounded-sm"
+                      style={{
+                        backgroundPosition: 'center',
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundImage: `url(assets/products/${_.get(productData.photos, '[0]')})`
+                      }}
+                    />
+                  </div>
+                  <div className="w-7/12 ml-4">
+                    <div>
+                      <p className="text-gray-500 text-sm quick-sand mb-0">{productData.merk}</p>
+                      <p className="text-gray-700 font-semibold text-2xl mb-2 quick-sand">{productData.name}</p>
+                      <p className="text-gray-400 text-sm">{getNumberOfSoldStr(productData)} Terjual</p>
                     </div>
-                </Container>
-            </section>
-            <section className="my-12">
-                <Container>
-                    <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
-                        Produk lainnya
-                    </p>
-                    <div className="flex flex-wrap">
-                        {shuffle([...props.product.all]).filter((_, i) => i < 6).map(p => (
-                            <div
-                                key={p.id}
-                                className="md:w-2/12 p-1"
-                            >
-                                <ProductCard data={p}/>
-                            </div>
-                        ))}
+                    <div className="mt-4 mb-8">
+                      {productData.discount > 0 ? (
+                        <p className="text-md mb-1 line-through text-gray-500 font-light mr-6">
+                          { `RP ${numberWithCommas(productData.price)}`}
+                        </p>
+                      ) : null}
+                      <p className="text-2xl orielly-text-primary font-bold">
+                        <span>Rp{numberWithCommas(productData.discount > 0  ? getPriceAfterDiscount(productData) : productData.price)}</span>
+                      </p>
                     </div>
-                </Container>
-            </section>
-            <Footer />
-        </>
-    )
+                    <div
+                      className="mb-8 mt-4 text-gray-600"
+                      dangerouslySetInnerHTML={{
+                      __html: productData.description
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="border-gray-100 shadow-md w-3/12 rounded-md bg-white mr-4 p-4">
+                  <p className="text-gray-500 mb-4 font-bold text-lg quick-sand">Atur jumlah</p>
+                  <div className="mb-4 flex items-center">
+                    <span className="mr-6 text-sm text-gray-500 font-semibold">
+                      Jumlah
+                    </span>
+                    <div className="ml-auto">
+                      <QuantityInput
+                        decrement={() => setQuantity(quantity - 1)}
+                        increment={() => setQuantity(quantity + 1)}
+                        quantity={quantity}
+                      />
+                    </div>
+                  </div>
+                  <hr />
+                  <div className="flex my-3">
+                    <span className="text-gray-500">Total</span>
+                    <span className="orielly-text-primary ml-auto font-bold">
+                      Rp{numberWithCommas((productData.discount > 0  ? getPriceAfterDiscount(productData) : productData.price) * quantity)}
+                    </span>
+                  </div>
+                  <Button className="rounded-md orielly-bg-primary text-white  w-full">
+                    <FontAwesomeIcon
+                      className="mr-2"
+                      icon={faShoppingBag}
+                    />
+                    Masukan Tas
+                  </Button>
+                </div>
+              </div>
+            ):null}
+          </div>
+        </Container>
+      </section>
+      <section className="my-12">
+        <Container>
+          <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+            Produk lainnya
+          </p>
+          <div className="flex flex-wrap">
+            {shuffle([...props.product.all]).filter((_, i) => i < 6).map(p => (
+              <div
+                key={p.id}
+                className="md:w-2/12 p-1"
+              >
+                <ProductCard data={p}/>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+      <Footer />
+    </>
+  )
 }
 const mapStateToProps = ({product}: RootState) => ({product});
 export default connect(mapStateToProps, {})(withRouter(ProductDetail));
