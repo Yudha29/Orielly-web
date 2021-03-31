@@ -62,7 +62,7 @@ const ProductDetail: React.FC<ProductDetailProps> = props => {
                       <p className="text-gray-700 font-semibold text-2xl mb-2 quick-sand">{productData.name}</p>
                       <p className="text-gray-400 text-sm">{getNumberOfSoldStr(productData)} Terjual</p>
                     </div>
-                    <div className="mt-4 mb-8">
+                    <div className="mt-4 mb-4">
                       {productData.discount > 0 ? (
                         <p className="text-md mb-1 line-through text-gray-500 font-light mr-6">
                           { `RP ${numberWithCommas(productData.price)}`}
@@ -73,7 +73,7 @@ const ProductDetail: React.FC<ProductDetailProps> = props => {
                       </p>
                     </div>
                     <div
-                      className="mb-8 mt-4 text-gray-600"
+                      className="mb-8 mt-2 text-sm text-gray-600"
                       dangerouslySetInnerHTML={{
                       __html: productData.description
                       }}
