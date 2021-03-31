@@ -13,9 +13,9 @@ import {faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import QuantityInput from "../../../bag/component/quantityInput/QuantityInput";
 import _ from "lodash";
-import {shuffle} from "../../../common/util/collection";
 import ProductCard from "../../component/ProductCard";
 import {Helmet} from "react-helmet";
+import HeaderProducts from "../../component/headerProducts/HeaderProducts";
 
 const ProductDetail: React.FC<ProductDetailProps> = props => {
   const [quantity, setQuantity] = useState(1);
@@ -114,13 +114,37 @@ const ProductDetail: React.FC<ProductDetailProps> = props => {
           </div>
         </Container>
       </section>
-      <section className="my-12">
+      {productData ? (
+        <section className="my-12">
+          <Container>
+            <HeaderProducts
+              title="Produk Serupa"
+              to={`/search?category=${productData.categories[0]}`}
+            />
+            <div className="flex flex-wrap">
+              {props.product.all
+                .filter(p => p.categories.some(e => productData?.categories.indexOf(e) > -1))
+                .filter((_, i) => i < 6)
+                .map(p => (
+                  <div
+                    key={p.id}
+                    className="md:w-2/12 p-1"
+                  >
+                    <ProductCard data={p}/>
+                  </div>
+                ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
+      <section className="mt-8 mb-12">
         <Container>
-          <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
-            Produk lainnya
-          </p>
+          <HeaderProducts
+            title="Rekomendasi"
+            to="/search"
+          />
           <div className="flex flex-wrap">
-            {shuffle([...props.product.all]).filter((_, i) => i < 6).map(p => (
+            {props.product.all.filter((p, i) => i < 6).map(p => (
               <div
                 key={p.id}
                 className="md:w-2/12 p-1"
