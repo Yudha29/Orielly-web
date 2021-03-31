@@ -11,11 +11,13 @@ import ProductDocument from "../../../product/state/contract/ProductDocument";
 import CheckBox from "../../component/form/input/checkbox/CheckBox";
 import {CheckBoxEvent} from "../../component/form/input/checkbox/CheckBoxEvent";
 import SearchState from "./SearchState";
+import ReactSelect from 'react-select';
 
 class Search extends React.Component<SearchProps, SearchState> {
   constructor(props: SearchProps) {
     super(props);
     this.state = {
+      category: {label: 'Semua', value: 'ALL'},
       labels: []
     }
     this.onCheck = this.onCheck.bind(this);
@@ -24,10 +26,11 @@ class Search extends React.Component<SearchProps, SearchState> {
   componentDidMount() {
     const query = new URLSearchParams(this.props.location.search);
     const label = query.get('label');
-    if (label)
-      this.setState({
-        labels: [label]
-      });
+    const category = query.get('category');
+    this.setState({
+      category: category ? {label: category, value: category} : {label: 'Semua', value: 'ALL'},
+      labels: label ? [label] : []
+    });
   }
 
   onCheck: CheckBoxEvent = ev => {
@@ -38,10 +41,21 @@ class Search extends React.Component<SearchProps, SearchState> {
     }))
   }
 
+  onCategoryChange = (value: {label: string; value: string}) => {
+    this.setState({category: value})
+  }
+
   filter(products: ProductDocument[]) {
     const query = new URLSearchParams(this.props.location.search);
     const keyword = query.get('q') || '';
     return products
+      .filter(p => {
+        if (this.state.category.value !== 'ALL') {
+          const tCategory = this.state.category.value.toLowerCase();
+          return p.categories.map(e => e.toLowerCase()).indexOf(tCategory) > -1 || p.name.toLowerCase().indexOf(tCategory) > -1
+        }
+        return true;
+      })
       .filter(p => {
         const labelStatus = this.state.labels.map(l => {
           let status = false;
@@ -68,7 +82,7 @@ class Search extends React.Component<SearchProps, SearchState> {
   }
 
   render() {
-    const {product} = this.props;
+    const {product, category} = this.props;
     const shuffledProducts = product.all;
     const filteredProducts = this.filter(shuffledProducts);
     const query = new URLSearchParams(this.props.location.search);
@@ -79,10 +93,20 @@ class Search extends React.Component<SearchProps, SearchState> {
         <section className="mt-8 mb-12">
           <Container>
             <div className="flex">
-              <div className="w-3/12">
+              <div className="w-3/12 mr-6">
                 <span className="quick-sand text-lg text-gray-600 font-semibold">
                   Filter Produk
                 </span>
+                <div>
+                  <p className="text-gray-500 mt-6 mb-3 font-bold text-sm quick-sand">Pilih Kategori</p>
+                  <div className="text-sm">
+                    <ReactSelect
+                      onChange={value => this.onCategoryChange(value as any)}
+                      value={this.state.category}
+                      options={[{label: 'Semua', value: 'ALL'}, ...category.all.map(e => ({label: e.name, value: e.name}))]}
+                    />
+                  </div>
+                </div>
                 <div>
                   <p className="text-gray-500 mt-6 mb-3 font-bold text-sm quick-sand">Pilih label</p>
                   <CheckBox
@@ -131,6 +155,6 @@ class Search extends React.Component<SearchProps, SearchState> {
   }
 }
 
-const mapStateToProps = ({product}: RootState) => ({product});
+const mapStateToProps = ({product, category}: RootState) => ({product, category});
 
 export default connect(mapStateToProps, {})(withRouter(Search));

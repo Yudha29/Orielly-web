@@ -1,3 +1,7 @@
 export default interface SearchState {
-  labels: string[]
+  labels: string[];
+  category: {
+    label: string;
+    value: string
+  };
 }
