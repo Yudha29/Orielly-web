@@ -87,6 +87,12 @@ const Footer: React.FC = () => {
                             </FooterListItem>
                         </FooterList>
                     </div>
+                    <div className="w-4/12">
+                        <img
+                          src="/assets/logo-light.png"
+                          alt="logo"
+                        />
+                    </div>
                 </div>
             </Container>
         </div>

@@ -37,15 +37,13 @@ const Navbar: React.FC<RouteComponentProps> = props => {
           </div>
         </div>
         <div className="flex pt-4 pb-3 items-center">
-          <p
-            className="quick-sand text-4xl text-white font-bold"
-            style={{
-              top: -70,
-              left: '2rem'
-            }}
-          >
-            O'rielly
-          </p>
+          <Link to="/">
+            <img
+              className="w-36 -mt-5"
+              src="/assets/logo-dark.png"
+              alt="logo"
+            />
+          </Link>
           <div className="mx-auto text-sm flex-1 text-center">
             <form
               className="relative w-8/12 mx-auto"

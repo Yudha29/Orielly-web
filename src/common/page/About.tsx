@@ -14,8 +14,11 @@ const About: React.FC = () => {
       <section className="my-8">
         <Container>
           <div className="flex mb-32">
-            <div className="w-5/12">
-
+            <div className="w-5/12 flex justify-center items-center">
+              <img
+                src="/assets/logo-light.png"
+                alt="logo"
+              />
             </div>
             <div className="w-7/12 text-gray-600">
               <p className="quick-sand text-xl orielly-text-primary font-bold my-4">
