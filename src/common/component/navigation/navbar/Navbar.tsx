@@ -78,15 +78,8 @@ const Navbar: React.FC<RouteComponentProps> = props => {
           <div className="flex ml-auto">
             <Link to="/bag">
               <FontAwesomeIcon
-                className="text-white mr-8"
-                icon={faShoppingBag}
-                size="lg"
-              />
-            </Link>
-            <Link to="/#">
-              <FontAwesomeIcon
                 className="text-white"
-                icon={faUserCircle}
+                icon={faShoppingBag}
                 size="lg"
               />
             </Link>
