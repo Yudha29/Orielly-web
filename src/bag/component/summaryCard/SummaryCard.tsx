@@ -20,7 +20,7 @@ const SummaryCard: React.FC<SummaryCardProps> = props => {
     const totalDiscount = getTotalDiscount();
     return (
         <div className="bg-white border text-sm text-gray-500 border-gray-100 rounded-md p-4 shadow-md">
-            <p className=" font-bold">Ringkasan Belanja</p>
+            <p className="font-bold">Ringkasan Belanja</p>
             <div className="border-b-2 border-gray-200 pt-4 py-2">
                 <table className="text-left">
                     <tr>
@@ -39,7 +39,7 @@ const SummaryCard: React.FC<SummaryCardProps> = props => {
             </div>
             <Button
                 type="button"
-                className="orielly-bg-primary mt-2 text-white rounded-md"
+                className="w-full orielly-bg-primary mt-2 text-white rounded-md"
             >
                 Checkout
             </Button>
