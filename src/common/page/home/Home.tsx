@@ -90,7 +90,7 @@ class Home extends React.Component<HomeProps> {
               to="/search"
             />
             <div className="flex flex-wrap">
-              {shuffle([...product.all]).filter((p, i) => i < 18).map(p => (
+              {shuffle([...product.all]).filter((p, i) => i < 12).map(p => (
                 <div
                   key={p.id}
                   className="md:w-2/12 p-1"
