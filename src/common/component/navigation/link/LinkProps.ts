@@ -1,5 +1,5 @@
 export default interface LinkProps {
     to: string;
-    children: string;
+    children: any;
     className?: string;
 }

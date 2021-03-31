@@ -8,6 +8,9 @@ import CategoryCard from "../../../category/component/CategoryCard";
 import ProductCard from "../../../product/component/ProductCard";
 import Footer from "../../component/navigation/footer/Footer";
 import {shuffle} from "../../util/collection";
+import Link from "../../component/navigation/link/Link";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 
 class Home extends React.Component<HomeProps> {
   render() {
@@ -40,9 +43,19 @@ class Home extends React.Component<HomeProps> {
         </section>
         <section className="mt-8 mb-12">
           <Container>
-            <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
-              Diskon nih
-            </p>
+            <div className="flex items-center mt-4">
+              <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+                Diskon nih
+              </p>
+              <div className="ml-auto text-sm">
+                <Link to="/search?label=discount">
+                  <span className="mr-2">Lihat lainnya</span>
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                  />
+                </Link>
+              </div>
+            </div>
             <div className="flex">
               <div
                 className="bg-gray-400 md:w-6/12 m-1 rounded-md bg-img"
@@ -65,9 +78,19 @@ class Home extends React.Component<HomeProps> {
         </section>
         <section className="mt-8 mb-12">
           <Container>
-            <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
-              Paling laris
-            </p>
+            <div className="flex items-center mt-4">
+              <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+                Paling Populer
+              </p>
+              <div className="ml-auto text-sm">
+                <Link to="/search?label=inDemand">
+                  <span className="mr-2">Lihat lainnya</span>
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                  />
+                </Link>
+              </div>
+            </div>
             <div className="flex flex-wrap">
               {shuffle([...product.all]).filter(e => e.numOfSold > 1000).filter((p, i) => i < 12).map(p => (
                 <div
@@ -82,9 +105,19 @@ class Home extends React.Component<HomeProps> {
         </section>
         <section className="mt-8 mb-12">
           <Container>
-            <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
-              Rekomendasi
-            </p>
+            <div className="flex items-center mt-4">
+              <p className="quick-sand text-2xl orielly-text-primary mb-6 font-bold">
+                Rekomendasi
+              </p>
+              <div className="ml-auto text-sm">
+                <Link to="/search">
+                  <span className="mr-2">Lihat lainnya</span>
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                  />
+                </Link>
+              </div>
+            </div>
             <div className="flex flex-wrap">
               {shuffle([...product.all]).filter((p, i) => i < 18).map(p => (
                 <div
