@@ -4,6 +4,7 @@ import {Form, Formik} from 'formik';
 import TextInput from "../../common/component/form/formik/textInput/TextInput";
 import Button from "../../common/component/button/Button";
 import {Helmet} from "react-helmet";
+import Link from "../../common/component/navigation/link/Link";
 
 class ForgotPassword extends React.Component<any, any> {
     initVal = {email: ''};
@@ -16,16 +17,22 @@ class ForgotPassword extends React.Component<any, any> {
                     <title>Forgot Password</title>
                 </Helmet>
                 <div className="shadow-md w-96 rounded-md mx-auto mt-36 bg-white p-8 relative">
-                    <p
-                        className="absolute quick-sand text-4xl orielly-text-primary font-bold"
-                        style={{
-                            top: -70,
-                            left: '50%',
-                            transform: 'translateX(-50%)'
-                        }}
+                    <div
+                      className="absolute"
+                      style={{
+                          top: -70,
+                          left: '45%',
+                          transform: 'translate(-50%, 0)'
+                      }}
                     >
-                        O'rielly
-                    </p>
+                        <Link to="/">
+                            <img
+                              className="w-36 -mt-5"
+                              src="/assets/logo-light.png"
+                              alt="logo"
+                            />
+                        </Link>
+                    </div>
                     <div className="mb-8">
                         <h1 className="quick-sand text-gray-700 text-3xl font-bold mb-3">Forgot Password</h1>
                         <p className="text-gray-500 text-sm">We will send the verification code to your email</p>

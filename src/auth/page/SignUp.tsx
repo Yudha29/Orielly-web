@@ -25,15 +25,21 @@ class SignUp extends React.Component<any, any> {
                     className="shadow-md rounded-md mx-auto mt-36 bg-white relative"
                     style={{width: 950}}
                 >
-                    <p
-                        className="absolute quick-sand text-4xl orielly-text-primary font-bold"
-                        style={{
-                            top: -70,
-                            left: '2rem'
-                        }}
+                    <div
+                      className="absolute"
+                      style={{
+                          top: -70,
+                          left: '2rem'
+                      }}
                     >
-                        O'rielly
-                    </p>
+                        <Link to="/">
+                            <img
+                              className="w-36 -mt-5"
+                              src="/assets/logo-light.png"
+                              alt="logo"
+                            />
+                        </Link>
+                    </div>
                     <div className="flex">
                         <div className="w-5/12 p-8 rounded-l-sm my-4">
                             <div className="mb-8">
