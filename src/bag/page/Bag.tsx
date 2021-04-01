@@ -20,7 +20,7 @@ class Bag extends React.Component<BagProps> {
     return (
       <>
         <Helmet>
-          <title>Tas anda</title>
+          <title>Tas Belanja Anda</title>
         </Helmet>
         <Navbar />
         <section className="my-8">
