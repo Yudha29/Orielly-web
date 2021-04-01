@@ -9,12 +9,16 @@ import ProductCard from "../../../product/component/ProductCard";
 import Footer from "../../component/navigation/footer/Footer";
 import {shuffle} from "../../util/collection";
 import HeaderProducts from "../../../product/component/headerProducts/HeaderProducts";
+import {Helmet} from "react-helmet";
 
 class Home extends React.Component<HomeProps> {
   render() {
     const {category, product} = this.props;
     return (
       <>
+        <Helmet>
+          <title>O'rielly | Grab your fashion</title>
+        </Helmet>
         <Navbar />
         <section className="mt-8 mb-12">
           <Container>

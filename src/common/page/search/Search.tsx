@@ -12,6 +12,7 @@ import CheckBox from "../../component/form/input/checkbox/CheckBox";
 import {CheckBoxEvent} from "../../component/form/input/checkbox/CheckBoxEvent";
 import SearchState from "./SearchState";
 import ReactSelect from 'react-select';
+import {Helmet} from "react-helmet";
 
 class Search extends React.Component<SearchProps, SearchState> {
   constructor(props: SearchProps) {
@@ -89,6 +90,9 @@ class Search extends React.Component<SearchProps, SearchState> {
     const keyword = query.get('q') || '';
     return (
       <>
+        <Helmet>
+          <title>Hasil Pencarian</title>
+        </Helmet>
         <Navbar />
         <section className="mt-8 mb-12">
           <Container>
