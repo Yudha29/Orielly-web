@@ -72,23 +72,6 @@ const TermOfUse: React.FC = () => {
               </li>
             </ul>
             <p className="quick-sand text-xl orielly-text-primary my-6 font-bold my-4">
-              Informasi Produk
-            </p>
-            <ul className="list-disc py-2 pl-8">
-              <li className="my-2">
-                Dengan melakukan transaksi pemesanan secara online di Orielly Store, Anda kami anggap telah mengerti informasi produk yang akan Anda beli.
-              </li>
-              <li className="my-2">
-                Informasi produk kami peroleh secara resmi dari katalog produk, official website, brosur, maupun informasi pendukung lainnya dari pihak penerbit
-              </li>
-              <li className="my-2">
-                Perbedaan warna dalam foto/gambar produk yang kami tampilkan di Orielly Store bisa diakibatkan oleh faktor pencahayaan dan setting/resolusi monitor komputer, dan karena itu tidak dapat dijadikan acuan.
-              </li>
-              <li className="my-2">
-                Harga produk dalam situs ini adalah benar pada saat dicantumkan.Harga yang tercantum adalah harga produk semata, tidak termasuk ongkos kirim. Ongkos kirim dihitung otomatis (berdasarkan harga dari jasa ekspedisi) sesuai dengan alamat pengiriman yang Anda berikan pada saat transaksi pemesanan.
-              </li>
-            </ul>
-            <p className="quick-sand text-xl orielly-text-primary my-6 font-bold my-4">
               Pengiriman
             </p>
             <ul className="list-disc py-2 pl-8">
