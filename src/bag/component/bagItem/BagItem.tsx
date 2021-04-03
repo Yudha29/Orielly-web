@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {RootState} from "../../../redux/contract/RootState";
 import BagItemProps from "./BagItemProps";
@@ -30,8 +31,10 @@ const BagItem: React.FC<BagItemProps> = props => {
                     >
                     </div>
                     <div className="ml-4 self-center">
-                        <p className="text-gray-500 text-xs mb-0">{productData.merk}</p>
-                        <p className="text-gray-700 font-semibold text-sm mb-0.5">{productData.name}</p>
+                        <Link to={`/${productData.id}`}>
+                            <p className="text-gray-500 text-xs mb-0">{productData.merk}</p>
+                            <p className="text-gray-700 font-semibold text-sm mb-0.5">{productData.name}</p>
+                        </Link>
                     </div>
                 </div>
                 <div className="self-center mx-8 text-left w-2/12">
