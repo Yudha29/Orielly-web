@@ -10,6 +10,7 @@ import {faEnvelope, faMapMarked, faPaperPlane, faPhoneAlt} from "@fortawesome/fr
 import * as Yup from "yup";
 import Container from "../component/layout/Container";
 import {Helmet} from "react-helmet";
+import swal from 'sweetalert';
 
 const Contact: React.FC = () => {
   const initVal = {email: '', name: '', message: ''}
@@ -34,7 +35,10 @@ const Contact: React.FC = () => {
                <Formik
                  initialValues={initVal}
                  validationSchema={validSchema}
-                 onSubmit={(values) => console.log(values)}
+                 onSubmit={(values) => swal({
+                   icon: 'success',
+                   text: `Terima kasih ${values.name}, pesan anda telah terkirim`
+                 })}
                >
                  <Form>
                    <TextInput
