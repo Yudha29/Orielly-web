@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
                    <TextInput
                      name="email"
                      label="Email"
-                     placeholder="Masukan Email / No Telp"
+                     placeholder="Masukan Email"
                    />
                      <TextArea
                        name="message"
