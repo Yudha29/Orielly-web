@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                    />
                    <TextInput
                      name="email"
-                     label="Email / Phone number"
+                     label="Email"
                      placeholder="Masukan Email / No Telp"
                    />
                      <TextArea

@@ -62,8 +62,8 @@ class SignUp extends React.Component<any, any> {
                                 <Form>
                                     <TextInput
                                         name="email"
-                                        label="Email / Phone number"
-                                        placeholder="Enter your Email / Phone number"
+                                        label="Email"
+                                        placeholder="Enter your Email"
                                     />
                                     <TextInput
                                         name="name"
