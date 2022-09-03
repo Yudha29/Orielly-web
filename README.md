@@ -1,21 +1,45 @@
-# Orielly E-Commerce Website
+# Orielly E-Commerce
+## About
+Orielly is an E-Commerce build using react JS (only Front End). this is my middle term project for the Web Design Course at Bunda Mulia University.
+   
+**Source Code** : https://github.com/Yudha29/orielly-ecommerce.  
+**Tech Stack** : React JS.  
+**Date** : Apr 2021.  
 
-### Deployment
-[![Netlify Status](https://api.netlify.com/api/v1/badges/db2637e3-0f58-4631-a50c-ffc455074517/deploy-status)](https://app.netlify.com/sites/orielly/deploys)
+## Overview
 
-### Lisence
-```
-Copyright 2020 Yudha Nawawi
+### About Page
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/about.png)
 
-       http://www.apache.org/licenses/LICENSE-2.0
+### Sign Up Page
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-```
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/sign-up.png)
+
+### Sign In Page
+
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/sign-in.png)
+
+### Home Page
+
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/home.png)
+
+### Search Page
+
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/search.png)
+
+### Product Page
+
+I am using livewire at this page to make the process to add product to the bag work behind the screen and not refresh the page.
+
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/product.png)
+
+### Bag Page
+
+At this page i am using livewire to make the page not refresh when the user update the product's quantity.
+
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/bag.png)
+
+### Contact Page
+
+![Sign Up](https://raw.githubusercontent.com/Yudha29/project-publication/main/orielly-ecommerce/images/contact.png)
